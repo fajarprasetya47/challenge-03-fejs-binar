@@ -1,0 +1,84 @@
+<%- include("partials/head")  %> 
+<%- include("partials/cmsView")  %>
+
+<div class="mb-2 d-flex">
+  <div style="flex-basis: 30%;">
+    <h3>Add Car</h3>
+  </div>
+</div>
+
+<form action="/addcar" enctype="multipart/form-data" method="post">
+  <div class="card p-3 mb-5">
+    <div class="row mb-3">
+    <div class="col-4">
+      <label for="name" class="required-label">Nama</label>
+    </div>
+    <div class="col-8">
+      <input type="text" class="form-control" name="name" id="name" required>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-4">
+      <label for="price" class="required-label">Harga</label>
+    </div>
+    <div class="col-8">
+      <input type="text" class="form-control" name="price" id="price" required>
+    </div>
+  </div>
+  <div class="row mb-4">
+    <div class="col-4">
+      <label for="img" class="required-label">Foto</label>
+    </div>
+    <div class="col-8">
+      <input type="file" class="form-control" name="img" id="img" accept="image/*" required>
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-4">
+      <label for="startRent">Start Rent</label>
+    </div>
+    <div class="col-8">
+      -
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-4">
+      <label for="finishRent">Finish Rent</label>
+    </div>
+    <div class="col-8">
+      -
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-4">
+      <label for="created">Created at</label>
+    </div>
+    <div class="col-8">
+      -
+    </div>
+  </div>
+  <div class="row mb-3">
+    <div class="col-4">
+      <label for="updated">Updated at</label>
+    </div>
+    <div class="col-8">
+      -
+    </div>
+  </div>
+  </div>
+  
+  <div class="position-relative">
+    <div class="bottom-1 start-0">
+      <a href="/cars" class="btn btn-dark-blue-outlined">Cancel</a>
+      <button type="submit" class="btn btn-dark-blue">Save</button>
+    </div>
+  </div>
+</form>
+
+
+
+  
+
+
+<%- include("partials/cmsFooter")  %> 
+<%- include("partials/footer")  %> 

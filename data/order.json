@@ -1,0 +1,26 @@
+[
+    {
+        "userEmail": "fajar@email.com",
+        "car": "Xenia",
+        "startRent": "2022/03/20",
+        "finishRent": "2022/03/25",
+        "price": "Rp.200.000",
+        "status": "active"
+    },
+    {
+        "userEmail": "jar@email.com",
+        "car": "Avanza",
+        "startRent": "2022/03/20",
+        "finishRent": "2022/03/25",
+        "price": "Rp.500.000",
+        "status": "finished"
+    },
+    {
+        "userEmail": "fa@email.com",
+        "car": "Xenia",
+        "startRent": "2022/03/20",
+        "finishRent": "2022/03/25",
+        "price": "Rp.300.000",
+        "status": "active"
+    }
+]

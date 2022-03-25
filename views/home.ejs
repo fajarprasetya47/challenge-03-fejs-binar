@@ -1,0 +1,81 @@
+<%- include("partials/head")  %> 
+<%- include("partials/cmsView")  %>
+
+<h3 class="mb-4">Dashboard</h3>
+<div class="mb-4">
+    <div class="mb-4 fw-bolder">
+        <img src="../public/img/Rectangle.svg" alt="">
+        <b>List Order</b>
+    </div>
+    <div class="mb-4">
+        <table id="listOrder">
+            <thead class="table-head">
+                <tr>
+                    <th>No</th>
+                    <th>User Email</th>
+                    <th>Car</th>
+                    <th>Start Rent</th>
+                    <th>Finish Rent</th>
+                    <th>Price</th>
+                    <th>Status</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% let i = 1 %> 
+                <% orders.forEach(order => { %>
+                    <tr>
+                        <td><%= i++ %> </td>
+                        <td><%= order.userEmail %> </td>
+                        <td><%= order.car %> </td>
+                        <td><%= order.startRent %> </td>
+                        <td><%= order.finishRent %> </td>
+                        <td><%= order.price %> </td>
+                        <td><%= order.status %> </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<div class="mb-4">
+    <div class="mb-4 fw-bolder">
+        <img src="../public/img/Rectangle.svg" alt="">
+        <b>List Car</b>
+    </div>
+    <div class="mb-4">
+        <table id="listCar">
+            <thead class="table-head">
+                <tr>
+                    <th>No</th>
+                    <th>Name</th>
+                    <th>Category</th>
+                    <th>Price</th>
+                    <th>Start Rent</th>
+                    <th>Finish Rent</th>
+                    <th>Created at</th>
+                    <th>Updated at</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% let j = 1 %> 
+                <% cars.forEach(car => { %>
+                    <tr>
+                        <td><%= j++ %> </td>
+                        <td><%= car.name %> </td>
+                        <td><%= car.category %> </td>
+                        <td><%= car.price %> </td>
+                        <td><%= car.startRent %> </td>
+                        <td><%= car.finishRent %> </td>
+                        <td><%= car.created %> </td>
+                        <td><%= car.updated %> </td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<%- include("partials/cmsFooter")  %> 
+<%- include("partials/footer")  %> 

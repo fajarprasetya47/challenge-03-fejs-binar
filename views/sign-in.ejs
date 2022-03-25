@@ -1,0 +1,33 @@
+<%- include("partials/head") %> 
+
+<div class="signin-content bg-white">
+    <img class="signin-img" src="../public/img/sign-in.png" alt="">
+    <div class="signin-form">
+        <img src="../public/img/logo.svg" alt="">
+        <h1>Welcome, Admin BCR</h1>
+        <% if (messageAlert) { %>
+            <div class="signin-alert">
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <%= messageAlert %>
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+            </div> 
+        <% } %>
+        <form action="/sign-in" method="post">
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email</label>
+                <input type="text" name="email" required class="form-control" placeholder="Contoh: johndee@gmail.com" id="exampleInputEmail1">
+            </div>
+            <div class="mb-3">
+                <label for="exampleInputPassword1" class="form-label">Password</label>
+                <input type="password" name="password" required placeholder="6+ karakter" class="form-control" id="exampleInputPassword1">
+            </div>
+            <div class="sign-in-button">
+                <button type="submit" class="btn btn-primary">Sign in</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+
+<%- include("partials/footer") %> 
